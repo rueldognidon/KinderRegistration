@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KinderRegistartion.RafflePage" Title="Raffle Entries">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}"/>
+                <Setter Property="HeightRequest" Value="60"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView ItemsSource="{Binding AttendeeList}" HasUnevenRows="True" RowHeight="80">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding FullName}" Margin="15" FontSize="Large" TextColor="#333333"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Raffle" Clicked="ShowRaffle"/>
+            </StackLayout>
+            <ContentView x:Name="RaffleView" IsVisible="False" BackgroundColor="#66000000" Padding="30">
+                <Frame  HorizontalOptions="Center" VerticalOptions="Center">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Ultra Electro Magnetic Randomizer" FontSize="Medium" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                        <Frame Padding="2">
+                            <Label x:Name="WinnerName" FontSize="50" VerticalTextAlignment="Center" FontAttributes="Bold" BackgroundColor="White" Text="Winner Name" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                        </Frame>
+                        <Button Text="Pick Random" Clicked="PickRandom"/>
+                        <Button Text="Close" Clicked="CloseRandom"/>
+
+                    </StackLayout>
+                </Frame>
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

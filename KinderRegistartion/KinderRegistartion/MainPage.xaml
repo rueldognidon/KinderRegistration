@@ -2,10 +2,47 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:KinderRegistartion"
-             x:Class="KinderRegistartion.MainPage">
+             x:Class="KinderRegistartion.MainPage" 
+             BackgroundImage="bg.png" 
+             IsBusy="{Binding IsBusy}"
+             Title="Registration">
+    <ContentPage.BindingContext>
+        <local:MainViewModel Navigation="{Static local:App.Navigation}"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}"/>
+                <Setter Property="HeightRequest" Value="60"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="PlaceholderColor" Value="#999999"/>
+                <!--<Setter Property="HeightRequest" Value="50"/>-->
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Image Source="logo.png" HorizontalOptions="FillAndExpand" Margin="20"/>
+            <Button Text="Registered Attendees" Command="{Binding GotoRegisteredCommand}"  />
+            <Entry Text="{Binding FirstName}" Placeholder="First Name" Completed="Entry_Completed"/>
+            <Entry Text="{Binding LastName}" Placeholder="Last Name" Completed="Entry_Completed"/>
+            <Entry Text="{Binding CompanySchool}" Placeholder="Company/School" Completed="Entry_Completed"/>
+            <Entry Text="{Binding Position}" Placeholder="Position" Completed="Entry_Completed"/>
+            <Entry Text="{Binding EmailAddress}" Keyboard="Email" Placeholder="Email Address" Completed="Entry_Completed"/>
+            <Entry Text="{Binding MobileNumber}" Keyboard="Telephone" Placeholder="Mobile Number" Completed="Entry_Completed"/>
+            <Entry Text="{Binding Years}" Keyboard="Numeric" Placeholder="Years of Experience" Completed="Entry_Completed"/>
+            <StackLayout Orientation="Horizontal" Padding="0">
+                <Switch IsToggled="{Binding Willing}"/>
+                <Label TextColor="White" Text="Are you willing to be contacted for hiring purposes?"/>
+            </StackLayout>
+            <Button Text="Submit" Command="{Binding SubmitCommand}"/>
+            <Button Text="Clear" Command="{Binding ClearCommand}"/>
+            <Button Text="Raffle" Clicked="Raffle_Clicked"/>
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

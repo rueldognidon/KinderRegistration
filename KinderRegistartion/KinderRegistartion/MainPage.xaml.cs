@@ -13,5 +13,20 @@ namespace KinderRegistartion
         {
             InitializeComponent();
         }
+
+
+        private void Entry_Completed(object sender, EventArgs e)
+        {
+            var cur = sender as Entry;
+            var stack = cur.Parent as StackLayout;
+            var curIndex = stack.Children.IndexOf(cur);
+            var nextControl = stack.Children[curIndex + 1];
+            nextControl.Focus();
+        }
+
+        private void Raffle_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RafflePage());
+        }
     }
 }

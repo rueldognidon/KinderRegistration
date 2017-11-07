@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:KinderRegistartion"
+             x:Class="KinderRegistartion.RegisteredPage" 
+             Title="List" 
+             IsBusy="{Binding IsBusy}">
+    <ContentPage.BindingContext>
+        <local:RegistrationViewModel Navigation="{Static local:App.Navigation}" />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonColor}"/>
+                <Setter Property="Margin" Value="30,10,30,10"/>
+                <Setter Property="HeightRequest" Value="60"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView ItemsSource="{Binding AttendeeList}" HasUnevenRows="True" ItemSelected="ListView_ItemSelected" RowHeight="80">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding FullName}" Margin="15" FontSize="Large" TextColor="#333333"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
