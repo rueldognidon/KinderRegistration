@@ -15,7 +15,7 @@ namespace KinderRegistartion.Droid
 {
     [Activity(
         Label = "Kinder Reg.", 
-        Icon = "@drawable/icon", 
+        Icon = "@drawable/ic_launcher", 
         Theme = "@style/MainTheme.Splash", 
         MainLauncher = true, 
         NoHistory = true,

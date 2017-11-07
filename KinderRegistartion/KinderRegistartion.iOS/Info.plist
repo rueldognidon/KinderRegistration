@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>ch.erni.xfkind.ios</string>
+	<string>ch.erni.xfkind2.ios</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.0</string>
 	<key>CFBundleIconFiles</key>
@@ -50,5 +50,9 @@
 	<string>1.0.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>Kinder Registration</string>
+	<key>XSLaunchImageAssets</key>
+	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Media.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>

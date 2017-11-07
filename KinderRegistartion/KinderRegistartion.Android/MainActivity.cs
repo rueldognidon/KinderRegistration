@@ -10,7 +10,7 @@ using Android.OS;
 namespace KinderRegistartion.Droid
 {
     [Activity(Label = "Kinder Reg.", 
-        Icon = "@drawable/icon", 
+        Icon = "@drawable/ic_launcher", 
         Theme = "@style/MainTheme", 
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
