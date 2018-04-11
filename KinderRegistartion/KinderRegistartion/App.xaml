@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KinderRegistartion.App">
+<Application x:Class="KinderRegistartion.App" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
 
         <ResourceDictionary>
-            <Color x:Key="ButtonColor">#9973d7</Color>
+            <Color x:Key="ButtonColor">#ffcd8c</Color>
         </ResourceDictionary>
-        <!-- Application resource dictionary -->
+        <!--  Application resource dictionary  -->
 
     </Application.Resources>
 </Application>
