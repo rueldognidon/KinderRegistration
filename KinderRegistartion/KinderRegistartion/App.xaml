@@ -3,7 +3,7 @@
     <Application.Resources>
 
         <ResourceDictionary>
-            <Color x:Key="ButtonColor">#ffcd8c</Color>
+            <Color x:Key="ButtonColor">#004b91</Color>
         </ResourceDictionary>
         <!--  Application resource dictionary  -->
 

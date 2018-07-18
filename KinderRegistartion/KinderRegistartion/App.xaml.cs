@@ -15,7 +15,7 @@ namespace KinderRegistartion
         {
             InitializeComponent();
 
-            Navigation.BarBackgroundColor = Color.FromHex("b7285d");
+            Navigation.BarBackgroundColor = Color.FromHex("00213d");
             Navigation.BarTextColor = Color.White;
             
              
