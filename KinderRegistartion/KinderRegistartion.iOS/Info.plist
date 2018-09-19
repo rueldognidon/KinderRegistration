@@ -25,7 +25,7 @@
 	<key>CFBundleIdentifier</key>
 	<string>ch.erni.xfkind3.ios</string>
 	<key>CFBundleVersion</key>
-	<string>3.0.0</string>
+	<string>4.0.0</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon-60@2x</string>
@@ -47,7 +47,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0.0</string>
+	<string>4.0.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>Kinder Registration</string>
 	<key>XSLaunchImageAssets</key>
