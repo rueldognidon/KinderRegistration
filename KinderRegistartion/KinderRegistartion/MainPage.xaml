@@ -26,7 +26,7 @@
     </ContentPage.Resources>
     <ScrollView>
         <StackLayout Spacing="10" Padding="30" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <Image Source="logo.png" HorizontalOptions="FillAndExpand" Margin="20"/>
+            <Image Source="logo.png" HorizontalOptions="FillAndExpand" Margin="-30, -30, -30, 20"/>
             <Button Text="Registered Attendees" Command="{Binding GotoRegisteredCommand}"  />
             <Entry Text="{Binding FirstName}" Placeholder="First Name" Completed="Entry_Completed"/>
             <Entry Text="{Binding LastName}" Placeholder="Last Name" Completed="Entry_Completed"/>
